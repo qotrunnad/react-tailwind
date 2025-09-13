@@ -1,11 +1,16 @@
-import {Routes,Route} from "react-rounter-dom"
-import Tabeltailwind from '../pages/Tabeltailwind'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import LandingPage from './pages/Landingpage'
 
-const App = () => {
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <Routes>
-      <Route path="/" element={<Tabeltailwind/>}>
-      </Route>
+      <Route path="/" element={<LandingPage/>}/>
     </Routes>
   )
 }

@@ -133,9 +133,12 @@ function Tabel () {
                     ))}
                 </tbody>
             </Tabel>
+        </div>
+        </div>
 
+        <div classname="flex flex-col md:flex-row gat-4 mt-10">
         </div>
-        </div>
+        
         </div>
         </div>
         </div>
@@ -143,4 +146,4 @@ function Tabel () {
     )
 }
 
-export default Tabeltailwind
+export default Tabel;
