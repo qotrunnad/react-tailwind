@@ -16,7 +16,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Data Login:', formData);
+    console.log('Data Login:', formData);   
     alert('Simulasi login berhasil');
   };
 
