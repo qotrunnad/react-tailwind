@@ -5,9 +5,6 @@ function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    alamatRumah: '',
-    orangtua: '',
-    asalSekolah: '',
   });
 
   const handleChange = (e) => {
@@ -60,57 +57,7 @@ function Login() {
             />
           </div>
 
-          {/* Alamat Rumah */}
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="alamatRumah">
-              Alamat Rumah
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="alamatRumah"
-              type="text"
-              name="alamatRumah"
-              value={formData.alamatRumah}
-              onChange={handleChange}
-              placeholder="Masukkan alamat rumah anda"
-              required
-            />
-          </div>
-
-          {/* Nama Orang Tua */}
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="orangtua">
-              Nama Orang Tua
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="orangtua"
-              type="text"
-              name="orangtua"
-              value={formData.orangtua}
-              onChange={handleChange}
-              placeholder="Masukkan nama orang tua"
-              required
-            />
-          </div>
-
-          {/* Asal Sekolah */}
-          <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="asalSekolah">
-              Asal Sekolah
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="asalSekolah"
-              type="text"
-              name="asalSekolah"
-              value={formData.asalSekolah}
-              onChange={handleChange}
-              placeholder="Masukkan asal sekolah"
-              required
-            />
-          </div>
-
+          
           {/* Tombol & Link */}
           <div className="flex items-center justify-between">
             <button
@@ -134,4 +81,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login; 

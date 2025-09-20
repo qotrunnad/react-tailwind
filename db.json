@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "1a8b",
+      "email": "qotrunnadaitsnaini@gmail.com",
+      "password": "fsbdbxg",
+      "alamatRumah": "gedung batu utara v",
+      "orangtua": "hafiz",
+      "asalSekolah": "pondok"
+    },
+    {
+      "id": "bdfd",
+      "email": "qotrunnadaitsnaini@gmail.com",
+      "password": "scdsds",
+      "alamatRumah": "gedung batu utara v",
+      "orangtua": "hafiz",
+      "asalSekolah": "pondok"
+    }
+  ]
+}
