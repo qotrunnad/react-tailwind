@@ -1,20 +1,41 @@
 {
-  "users": [
+  "users": [],
+  "menu": [
     {
-      "id": "1a8b",
-      "email": "qotrunnadaitsnaini@gmail.com",
-      "password": "fsbdbxg",
-      "alamatRumah": "gedung batu utara v",
-      "orangtua": "hafiz",
-      "asalSekolah": "pondok"
+      "id": "017b",
+      "makanan": "ayam bakar",
+      "paket": "A",
+      "harga": "20.000"
     },
     {
-      "id": "bdfd",
-      "email": "qotrunnadaitsnaini@gmail.com",
-      "password": "scdsds",
-      "alamatRumah": "gedung batu utara v",
-      "orangtua": "hafiz",
-      "asalSekolah": "pondok"
+      "id": "c5eb",
+      "makanan": "ayam bakar",
+      "paket": "A",
+      "harga": "20.000"
+    },
+    {
+      "id": "1e25",
+      "makanan": "ayam bakar",
+      "paket": "A",
+      "harga": "20.000"
+    },
+    {
+      "id": "a39d",
+      "makanan": "ayam bakar",
+      "paket": "A",
+      "harga": "20.000"
+    },
+    {
+      "id": "d0f2",
+      "makanan": "ayam bakar",
+      "paket": "A",
+      "harga": "20.000"
+    },
+    {
+      "id": "b5c9",
+      "makanan": "ayam goreng ",
+      "paket": "A",
+      "harga": "20.000"
     }
   ]
 }

@@ -1,21 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Route, Routes } from 'react-router-dom' 
-import LandingPage from './pages/Landingpage'
-import Register from './pages/register'
-import Login from './pages/login'
+import TambahData from './pages/Tambahdata'
+import TabelData from './pages/Tabeldata'
+import Sidnav from './component/Sidnav'
+import EditData from './pages/Editdata'
+import Dashboard from './component/Dashboard'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage/>}/>
-      <Route path="/d" element={<Register/>}/>
-      <Route path="/login" element={<Login/>}/>
+    <div>
+      <Sidnav/>
+   <div>
+   <Routes>
+      <Route path="/" element={<TambahData/>}/>
+      <Route path="/k" element={<TabelData/>}/>
+      <Route path="/r" element={<EditData/>}/>
+      <Route path="/d" element={<Dashboard/>}/>
     </Routes>
+   </div>
+    </div>
   )
 }
 

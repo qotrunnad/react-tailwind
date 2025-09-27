@@ -11,10 +11,41 @@ function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Data Login:', formData);   
-    alert('Simulasi login berhasil');
+
+    try {
+      const res = await axios.get("http://localhost:5000/users", {
+        params: { email: formData.email, password: formData.password },
+      });
+
+      if (res.data.length > 0) {
+        Swal.fire({
+          icon: "success",
+          title: "Berhasil!",
+          text: "Login berhasil, anda akan diarahkan ke dashboard.", 
+          showConfirmButton: false,
+          timer: 2000,
+        });
+
+        navigate("/dashbaord");
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Login gagal!",
+          text: "Email atau password salah.",
+          confirmButtonText: "Coba Lagi",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      Swal.fire ({
+        icon: "error",
+        title: "Terjadi Error",
+        text: "Silakan coba lagi nanti.",
+        confirmButtonText: "OK",
+      });
+    }
   };
 
   return (
@@ -34,7 +65,7 @@ function Login() {
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={handleChange}   
               placeholder="Masukkan email anda"
               required
             />
