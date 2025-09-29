@@ -14,7 +14,9 @@ return (
 
             <nav className="space-y-3">
               <a href="/d" className="block py-2 px-3 rounded hover:bg-blue-600">Dashboard</a> 
-              <a href="/k" className="block py-2 px-3 rounded hover:bg-blue-600">Tabel Data</a>
+              <a href="/i" className="block py-2 px-3 rounded hover:bg-blue-600">Data Siswa</a>
+              <a href="/k" classname="block py-2 px-3 rounded hover:bg-blue-600">Daftar Menu Kantin</a>
+              <a href="" classname="block py-2 px-3 rounded hover:bg-blue-600"></a>
               <a href="" classname="block py-2 px-3 rounded hover:bg-blue-600"></a>
             </nav>
             <div className=''></div>

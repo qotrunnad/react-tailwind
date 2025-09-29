@@ -13,7 +13,7 @@ function App() {
       <Sidnav/>
    <div>
    <Routes>
-      <Route path="/" element={<TambahData/>}/>
+      <Route path="/i" element={<TambahData/>}/>
       <Route path="/k" element={<TabelData/>}/>
       <Route path="/r" element={<EditData/>}/>
       <Route path="/d" element={<Dashboard/>}/>

@@ -2,30 +2,6 @@
   "users": [],
   "menu": [
     {
-      "id": "017b",
-      "makanan": "ayam bakar",
-      "paket": "A",
-      "harga": "20.000"
-    },
-    {
-      "id": "c5eb",
-      "makanan": "ayam bakar",
-      "paket": "A",
-      "harga": "20.000"
-    },
-    {
-      "id": "1e25",
-      "makanan": "ayam bakar",
-      "paket": "A",
-      "harga": "20.000"
-    },
-    {
-      "id": "a39d",
-      "makanan": "ayam bakar",
-      "paket": "A",
-      "harga": "20.000"
-    },
-    {
       "id": "d0f2",
       "makanan": "ayam bakar",
       "paket": "A",
@@ -36,6 +12,12 @@
       "makanan": "ayam goreng ",
       "paket": "A",
       "harga": "20.000"
+    },
+    {
+      "id": "7b2c",
+      "makanan": "ayam geprek",
+      "paket": "c",
+      "harga": "15.000"
     }
   ]
 }

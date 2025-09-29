@@ -5,7 +5,7 @@ import axios from "axios";
 function Tabeldata() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,9 +43,10 @@ function Tabeldata() {
     <div className="mt-10 m-10 p-5">
       <div className="flex justify-end p-8 mr-14">
 
-        <button
-          type="submit" className=" px-4 py-2 bg-green-500 text-black rounded hover:bg-green-600 transition">
-
+        <button 
+        onClick={() => navigate("/i")}
+          type="button" className=" px-4 py-2 bg-green-500 text-black rounded hover:bg-green-600 transition">
+           
           tambah
         </button>
       </div>

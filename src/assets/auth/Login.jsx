@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
   const [formData, setFormData] = useState({
-    email: '',
+    email: '', 
     password: '',
   });
 
