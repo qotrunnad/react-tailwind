@@ -1,29 +1,30 @@
-import React, { useEffect, useState, UseState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Editdata() {
-    const { ID} = UseParams(); // ambil id dari URL
-    const Navigate = UseNavigate();
+    const { ID} = useParams(); // ambil id dari URL
+    const Navigate = useNavigate();
 
     const [FormData,SetFormData] = useState({
-        makanan:"",
-        paket:"",
-        harga:"",
+        Name:"",
+        Email:"",
+        Jurusan:"",
 });
-const [Loading,SetLoading] =UseState(true);
+const [Loading,SetLoading] =useState(true);
 
 //ambil data berdasarkan id
+console.log("ID dari URL:", ID);
 useEffect(() => {
     const fetchData = async () => {
 try{
     const res = await axios.get
-    ('http://localhost:5000/menu/${id}');
+    (`http://localhost:5000/menu/:ID`);
     const data = Array.isArray(res.data) ? res.data[0]
     : res.data; // antisipasi kalau API return array 
     SetFormData(data);
 } catch (err) {
-    console.error("Gagal mengambil data:", err);
+    console.error("Gagal mengambil data:", err.response?.data || err.message);
     alert ("Gagal mengambil data!");
 } finally {
     SetLoading(false)
@@ -38,13 +39,14 @@ const handlechange = (e) => {
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Data yang dikirim ke backend:", FormData)
     try {
-        await axios.put('http://localhost:5000/menu/${id}'),
+        await axios.put(`http://localhost:5000/menu/:ID`, FormData),
         (FormData);
         alert("Data berhasil diubah!");
         Navigate("/Labeldata");
     } catch (err) {
-        console.error("Gagal mengupdate data:", err);
+        console.error("Gagal mengupdate data:", err.response?.data || err.message);
         alert("Gagal mengupdate data!");
     }
 };
@@ -63,15 +65,15 @@ return (
         <div className="mb-4">
             <label 
                 className="block text-gray-700 text-sm font-bold mb"
-                htmlFor="makanan"
+                htmlFor="Name"
             >
-                Makanan
+                Name
             </label>
             <input
-                id="makanan"
-                name="Makanan"
+                id="Name"
+                name="Name"
                 type="text"
-                value={FormData.Makanan || ""}
+                value={FormData.Name || ""}
                 onChange={handlechange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
                 required
@@ -80,15 +82,15 @@ return (
         <div className="mb-4">
         <label
         className="block text-gray-700 text-sm font-bold mb-2"
-        htmlfor="paket"
+        htmlFor="Email"
     >
-        Paket
+        Email
         </label>
         <input
-        id="Paket"
-        name="Paket"
+        id="Email"
+        name="Email"
         type="text"
-        value={FormData.Paket || ""}
+        value={FormData.Email || ""}
         onChange={handlechange}
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" 
         required
@@ -97,21 +99,29 @@ return (
         <div className="mb-6">
             <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="harga"
+            htmlFor="Jurusan"
             >
-                harga
+                Jurusan
             </label>
             <input
-            id="harga"
-            name="harga"
-            type="number"
-            value={FormData.harga || ""}
+            id="Jurusan"
+            name="Jurusan"
+            type="text"
+            value={FormData.Jurusan || ""}
             onChange={handlechange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
             required
             />
         </div>
+        
+
         <div className="flex items-center justify-between">
+            <button
+               type="submit"
+               className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            >
+                simpan data
+            </button>
             <button
                 type="button"
                 onClick={() => Navigate(-1)}

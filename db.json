@@ -18,6 +18,36 @@
       "makanan": "ayam geprek",
       "paket": "c",
       "harga": "15.000"
+    },
+    {
+      "id": "509f",
+      "makanan": "gurami bakar",
+      "paket": "a",
+      "harga": "20.000"
+    },
+    {
+      "id": "ed3b",
+      "makanan": "gurami bakar",
+      "paket": "a",
+      "harga": "20.000"
+    }
+  ],
+  "siswa": [
+    {
+      "id": "0470",
+      "nama": "alif",
+      "email": "adaaja@gmail.com",
+      "jurusan": "akl",
+      "angkatan": "2024",
+      "status": "diterima"
+    },
+    {
+      "id": "933a",
+      "nama": "alif",
+      "email": "adaaja@gmail.com",
+      "jurusan": "akl",
+      "angkatan": "2024",
+      "status": "diterima"
     }
   ]
 }

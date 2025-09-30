@@ -32,18 +32,18 @@ function Dashboard() {
           <p className="text-green-600 text-2xl font-bold">{siswa.length}</p>
         </div>
         <div className="p-4 shadow rounded text-center">
-          <h2>Sangat Puas</h2>
-          <p className="text-blue-600 text-2xl font-bold">90</p>
+          <h2>Diterima</h2>
+          <p className="text-blue-600 text-2xl font-bold">80</p>
         </div>
         <div className="p-4 shadow rounded text-center">
-          <h2>Tidak Puas</h2>
-          <p className="text-red-600 text-2xl font-bold">4</p>
+          <h2>Ditolak</h2>
+          <p className="text-red-600 text-2xl font-bold">5</p>
         </div>
       </div>
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Daftar sekolah</h2>
         <button
-        onClick={() => navigate("/a")}
+        onClick={() => navigate("/e")}
         className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4"
         >
             Tambah data
@@ -59,6 +59,33 @@ function Dashboard() {
                 <th className="border px-4 py-2">Aksi</th>
             </tr>
         </thead>
+        <tbody>
+               {siswa.map((item, index) => (
+               <tr key={item.id}>
+               <td className="border px-4 py-2">{index + 1}</td>
+               <td className="border px-4 py-2">{item.nama}</td>
+               <td className="border px-4 py-2">{item.email}</td>
+               <td className="border px-4 py-2">{item.jurusan}</td>
+               <td className="border px-4 py-2">{item.angkatan}</td>
+               <td className="border px-4 py-2">{item.status}</td>
+               <td className="border px-4 py-2">
+            <button
+                className="bg-yellow-500 hover:bg-yellow-600 text-white px-2 py-1 rounded mr-2"
+                onClick={() => navigate(`/edit/${item.id}`)}
+            >
+                Edit 
+            </button>
+            <button
+                className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded"
+                onClick={() => handleDelete(item.id)}
+            >
+                Hapus
+            </button>
+         </td>
+       </tr>
+      ))}
+    </tbody>
+
       </table>
     </>
   );
